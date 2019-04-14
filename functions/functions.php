@@ -1,7 +1,11 @@
 <?php
 
 //establishing communication with database
+<<<<<<< HEAD
 $con = mysqli_connect("localhost","root","","ecommerce");
+=======
+$con = mysqli_connect("localhost","root","","site_ecommerce");
+>>>>>>> bb403c252b33ea296fbee0cbf07aa45c9fb3acf0
 //getting categories
 
 
@@ -18,7 +22,11 @@ function getCats(){
 		$cat_id=$row_cats['category_id'];
 		$cat_title=$row_cats['category_title'];
 	
+<<<<<<< HEAD
 	echo "<li><a href='index.php?cat=$cat_id'>$cat_title</a></li>";
+=======
+	echo "<li><a href='#'>$cat_title</a></li>";
+>>>>>>> bb403c252b33ea296fbee0cbf07aa45c9fb3acf0
 
 	}
 }
@@ -36,6 +44,7 @@ function getBrands(){
 		$brand_id=$row_brands['brand_id'];
 		$brand_title=$row_brands['brand_title'];
 
+<<<<<<< HEAD
 		echo "<li><a href='index.php?brand=$brand_id'>$brand_title</a></li>";
 	}
 }
@@ -44,6 +53,13 @@ function get_pro(){
 
 if(!isset($_GET['cat'])){
 	if(!isset($_GET['brand'])){
+=======
+		echo "<li><a href='#'>$brand_title</a></li>";
+	}
+}
+
+function get_pro(){
+>>>>>>> bb403c252b33ea296fbee0cbf07aa45c9fb3acf0
 	global $con;
 
 	$get_pro="select * from products order by RAND() LIMIT 0,6 ";
@@ -61,6 +77,7 @@ if(!isset($_GET['cat'])){
 
 		echo "
 		<div id='single_product'>
+<<<<<<< HEAD
 
 			<h3>$product_title<h3>
 		
@@ -175,3 +192,16 @@ function getCatpro(){
 		}
 ?>
   
+=======
+			<h3>$product_title<h3>
+			<img src='admin_area/product_images/$product_image' width='180' height='180' />
+			<p><b> $product_price </b></p>
+			<a href='details.php' style='float:left;'>Details</a>
+			<a href='index.php'><button style='float:right'>Add to Cart</button></a>
+		</div>";
+	}
+
+}
+?>
+ 
+>>>>>>> bb403c252b33ea296fbee0cbf07aa45c9fb3acf0

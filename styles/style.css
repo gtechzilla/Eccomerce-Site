@@ -37,8 +37,11 @@ body{
 	width: 1000px;
 	height: auto;
 	margin: auto;
+<<<<<<< HEAD
 	background:black ;
 
+=======
+>>>>>>> bb403c252b33ea296fbee0cbf07aa45c9fb3acf0
 }
 
 .header_wrapper{
@@ -90,7 +93,11 @@ body{
 	width:1000px;
 	
 	margin: auto;
+<<<<<<< HEAD
 	
+=======
+	background: ;
+>>>>>>> bb403c252b33ea296fbee0cbf07aa45c9fb3acf0
 }
 
 #content_area{
@@ -123,7 +130,11 @@ body{
 
 #categories li{
 	list-style: none;
+<<<<<<< HEAD
 	margin: 5px;
+=======
+	margin 5px;
+>>>>>>> bb403c252b33ea296fbee0cbf07aa45c9fb3acf0
 }
 
 #categories a{
@@ -144,6 +155,7 @@ body{
 	margin-bottom: 10px;
 }
 
+<<<<<<< HEAD
 	#single_product{float: left; margin-left:30px; padding:10px;}
 	#single_product img{border: 2px solid black;}
 	#shopping_cart {width:800px; height: 50px; background-color: black; color: rgb(238, 224, 224);}
@@ -151,5 +163,13 @@ body{
 	width: 1000px;
 	height: 100px;
 	background:rgb(33, 141, 168) ;
+=======
+	#single_product{float: left; margin-left:20px; padding:10px}
+	#single_product img{border: 2px solid black}
+#footer{
+	width: 1000px;
+	height: 100px;
+	background:black ;
+>>>>>>> bb403c252b33ea296fbee0cbf07aa45c9fb3acf0
 	clear:both;
 }
