@@ -64,10 +64,36 @@
 					</div>
 
 					<div id='product_box'>
+                    <?php
+                    $get_pro="select * from products ";
 
-						<?php get_pro(); ?> 
-						<?php getCatpro(); ?> 
-						<?php getBrandpro(); ?> 
+                        $run_pro=mysqli_query($con,$get_pro);
+
+                        while($row_pro=mysqli_fetch_array($run_pro)){
+
+                            $product_id=$row_pro['product_id'];
+                            $product_category=$row_pro['product_category'];
+                            $product_brand=$row_pro['product_brand'];
+                            $product_title=$row_pro['product_title'];
+                            $product_price=$row_pro['product_price'];
+                            $product_image=$row_pro['product_image'];
+
+                            echo "
+                            <div id='single_product'>
+
+                                <h3>$product_title<h3>
+                            
+                                <img src='admin_area/product_images/$product_image' width='180' height='180' />
+                            
+                                <p><b> $product_price </b></p>
+                            
+                                <a href='details.php?product_id=$product_id' style='float:left;'>Details</a>
+                            
+                                <a href='index.php?product_id=$product_id'><button style='float:right'>Add to Cart</button></a>
+                            
+                                </div>";
+                        }
+?>
 					</div>
 				</div>
 
