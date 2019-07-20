@@ -2,9 +2,9 @@
 
 //if (session_status() !== PHP_SESSION_ACTIVE) {session_start();}
 if(session_id() == '' || !isset($_SESSION)){session_start();}
-
+include 'config.php';
+include 'functions.php';
 ?>
-
 <!doctype html>
 <html class="no-js" lang="en">
   <head>
@@ -45,6 +45,7 @@ if(session_id() == '' || !isset($_SESSION)){session_start();}
   </head>
   <body>
 
+<!-- menu and search bar-->
   <div class="colorlib-loader"></div>
   <div id="page">
 		<nav class="colorlib-nav" role="navigation">
@@ -91,125 +92,74 @@ if(session_id() == '' || !isset($_SESSION)){session_start();}
 					</div>
 				</div>
 			</div>
-			<div class="sale">
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-8 offset-sm-2 text-center">
-							<div class="row">
-								<div class="owl-carousel2">
-									<div class="item">
-										<div class="col">
-											<h3><a href="#">25% off (Almost) Everything! Use Code: Summer Sale</a></h3>
-										</div>
-									</div>
-									<div class="item">
-										<div class="col">
-											<h3><a href="#">Our biggest sale yet 50% off all summer designs</a></h3>
-										</div>
-									</div>
-								</div>
-							</div>
+
+		</nav>
+
+		<div class="breadcrumbs">
+			<div class="container">
+				<div class="row">
+
+				</div>
+			</div>
+		</div>
+<!--section1 -->
+		<div class="breadcrumbs-two">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="breadcrumbs-img" style="background-image: url(images/ja/IMG-20190629-WA0052.jpg);">
+						</div>
+						<div class="menu text-center">
+							<p><a href="#">New Arrivals</a> <a href="#">Best Sellers</a> <a href="#">Amazing Discounts</a></p>
 						</div>
 					</div>
 				</div>
 			</div>
+		</div>
 
-    </nav>
-    <aside id="colorlib-hero">
-			<div class="flexslider">
-				<ul class="slides">
-			   	<li style="background-image: url(images/ja/IMG-20190629-WA0012.jpg);">
-			   		<div class="overlay"></div>
-			   		<div class="container-fluid">
-			   			<div class="row">
-				   			<div class="col-sm-6 offset-sm-3 text-center slider-text">
-				   				<div class="slider-text-inner">
-				   					<div class="desc">
-					   					<h1 class="head-1">Men's</h1>
-					   					<h2 class="head-2"></h2>
-					   					<h2 class="head-3">Collection</h2>
-					   					<p class="category"><span>New trending clothes</span></p>
-					   					<p><a href="#" class="btn btn-primary">Shop Collection</a></p>
-				   					</div>
-				   				</div>
-				   			</div>
-				   		</div>
-			   		</div>
-			   	</li>
-			   	<li style="background-image: url(images/ja/IMG-20190629-WA0041.jpg);">
-			   		<div class="overlay"></div>
-			   		<div class="container-fluid">
-			   			<div class="row">
-				   			<div class="col-sm-6 offset-sm-3 text-center slider-text">
-				   				<div class="slider-text-inner">
-				   					<div class="desc">
-					   					<h1 class="head-1">Huge</h1>
-					   					<h2 class="head-2">Sale</h2>
-					   					<h2 class="head-3"><strong class="font-weight-bold">50%</strong> Off</h2>
-					   					<p class="category"><span>Big sale sandals</span></p>
-					   					<p><a href="#" class="btn btn-primary">Shop Collection</a></p>
-				   					</div>
-				   				</div>
-				   			</div>
-				   		</div>
-			   		</div>
-			   	</li>
-			   	<li style="background-image: url(images/ja/IMG-20190629-WA0022.jpg);">
-			   		<div class="overlay"></div>
-			   		<div class="container-fluid">
-			   			<div class="row">
-				   			<div class="col-sm-6 offset-sm-3 text-center slider-text">
-				   				<div class="slider-text-inner">
-				   					<div class="desc">
-					   					<h1 class="head-1">New</h1>
-					   					<h2 class="head-2">Arrival</h2>
-					   					<h2 class="head-3">up to <strong class="font-weight-bold">30%</strong> off</h2>
-					   					<p class="category"><span>New stylish shoes for men</span></p>
-					   					<p><a href="#" class="btn btn-primary">Shop Collection</a></p>
-				   					</div>
-				   				</div>
-				   			</div>
-				   		</div>
-			   		</div>
-			   	</li>
-			  	</ul>
-		  	</div>
-		</aside>
-		<div class="colorlib-intro">
+
+<!--section2-->
+		
+		<div class="colorlib-featured">
 			<div class="container">
 				<div class="row">
-					<div class="col-sm-12 text-center">
-						<h2 class="intro">It started with a simple idea: Create quality, well-designed products that I wanted myself.</h2>
-					</div>
+					<?php getCats(); ?>
+
 				</div>
 			</div>
 		</div>
-
 
 		<div class="colorlib-product">
-			<div class="container">
-				<div class="row">
-				
-				</div>
-            </div>
-				<div class="row">
-					<div class="col-md-12 text-center">
-						<p><a href="products.php" class="btn btn-primary btn-lg">Shop All Products</a></p>
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-8 offset-sm-2 text-center colorlib-heading colorlib-heading-sm">
+							<h2>View All Products</h2>
+						</div>
+					</div>
+					<div class="row row-pb-md">
+						<?php getPro(); ?>
+					</div>
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<div class="block-27">
+						   <ul>
+							   <li><a href="#"><i class="ion-ios-arrow-back"></i></a></li>
+							  <li class="active"><span>1</span></li>
+							  <li><a href="#">2</a></li>
+							  <li><a href="#">3</a></li>
+							  <li><a href="#">4</a></li>
+							  <li><a href="#">5</a></li>
+							  <li><a href="#"><i class="ion-ios-arrow-forward"></i></a></li>
+						   </ul>
+						</div>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-
-		
+	
 
 
-
-
-    <img data-interchange="[images/bolt-retina.jpg, (retina)], [images/bolt-landscape.jpg, (large)], [images/bolt-mobile.jpg, (mobile)], [images/bolt-landscape.jpg, (medium)]">
-    <noscript><img src="images/bolt-landscape.jpg"></noscript>
-
-
-		<footer id="colorlib-footer" role="contentinfo">
+    <footer id="colorlib-footer" role="contentinfo">
 			<div class="container">
 
 			<div class="copy">
@@ -222,6 +172,7 @@ if(session_id() == '' || !isset($_SESSION)){session_start();}
 					</div>
 				</div>
 			</div>
+		</div>
 		</footer>
 	</div>
 
